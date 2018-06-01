@@ -1,0 +1,33 @@
+.social {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 145px;
+  padding-bottom: 10px;
+}
+
+.social__link {
+  display: block;
+  width: 27px;
+  height: 31px;
+  fill: #000000;
+
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    fill: #46c1ae;
+    opacity: 0.4;
+  }
+}
+
+.social__item {
+  margin-right: 32px;
+}
+
+.social__item:nth-child(3n+3) {
+  margin-right: 0;
+}

@@ -1,0 +1,22 @@
+.container {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .container {
+    width: 1150px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}

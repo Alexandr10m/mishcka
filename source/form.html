@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="fonts/OpenSans.woff2" as="font">
+  <link rel="preload" href="fonts/OpenSansBold.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/picturefill.min.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>
+    svg4everybody();
+  </script>
+</head>
+
+<body class="text">
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <header class="page-header page-header--closed page-header--nojs">
+    <div class="page-header__container">
+      <div class="page-header__top">
+        <a href="index.html" class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" width="90" height="80" class="page-header__image" alt="Магазин «Мишка»">
+          </picture>
+        </a>
+        <button class="page-header__toggle" type="button" aria-label="Меню"></button>
+      </div>
+      <ul class="site-list">
+        <li class="site-list__item">
+          <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="form.html">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="promo-list promo-list--none ">
+        <li class="promo-list__item">
+          <a class="promo-list__link" href="#">Новые поступления</a>
+        </li>
+        <li class="promo-list__item">
+          <a class="promo-list__link" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <ul class="shop-list">
+        <li class="shop-list__item">
+          <a class="shop-list__link" href="#" aria-label="Поиск по сайту">
+            <span class="shop-list__search-icon">
+              <svg width="20" height="20">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </span>Поиск по сайту</a>
+        </li>
+        <li class="shop-list__item">
+          <a class="shop-list__link" href="#">
+            <span class="shop-list__basket-icon">
+              <svg width="20" height="20">
+                <use xlink:href="#icon-cart"></use>
+              </svg>
+            </span>Корзина: пока пуста</a>
+        </li>
+      </ul>
+      <p class="page-header__deliver">Бесплатная доставка по России</p>
+    </div>
+  </header>
+  <main class="main-form">
+    <div class="main-form__promo promo">
+      <h2 class="promo__title">Вязание на заказ</h2>
+    </div>
+    <section class="form-content">
+      <div class="form-content__container">
+        <p class="form-content__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+      </div>
+      <form method="post" action="https://echo.htmlacademy.ru">
+        <fieldset class="form-content__type">
+          <div class="form-content__type-container">
+            <h3 class="form-content__title">Тип</h3>
+            <div class="form-content__wrapper">
+              <div class="form-content__item">
+                <input class="form-content__radio visual-hidden" type="radio" name="radio-item" id="radio-item1" checked>
+                <label class="form-content__label" for="radio-item1">Аксессуар для интерьера</label>
+              </div>
+              <div class="form-content__item">
+                <input class="form-content__radio visual-hidden" type="radio" name="radio-item" id="radio-item2">
+                <label class="form-content__label" for="radio-item2">Детская игрушка</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form-content__color form-content__black">
+          <div class="form-content__color-container">
+            <h3 class="form-content__title">Цвет</h3>
+            <div class="form-content__wrapper-container">
+              <div class="form-content__item">
+                <input type="checkbox" id="white" class="form-content__input visual-hidden" checked>
+                <label for="white" class="form-content__label">Белый</label>
+              </div>
+              <div class="form-content__item">
+                <input type="checkbox" id="gray" class="form-content__input visual-hidden" checked>
+                <label for="gray" class="form-content__label">Серый</label>
+              </div>
+              <div class="form-content__item">
+                <input type="checkbox" id="tiffani" class="form-content__input visual-hidden">
+                <label for="tiffani" class="form-content__label">«Тиффани»</label>
+              </div>
+              <div class="form-content__item">
+                <input type="checkbox" id="black" class="form-content__input visual-hidden">
+                <label for="black" class="form-content__label">Черный</label>
+              </div>
+              <div class="form-content__item">
+                <input type="checkbox" id="pink" class="form-content__input visual-hidden">
+                <label for="pink" class="form-content__label">Розовый</label>
+              </div>
+              <div class="form-content__item">
+                <input type="checkbox" id="yellow" class="form-content__input visual-hidden">
+                <label for="yellow" class="form-content__label">Оранжевый</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form-content__user">
+          <div class="form-content__user-container">
+            <h3 class="form-content__title">Фио</h3>
+            <div class="form-content__user-wrapper">
+              <div class="form-content__user-item">
+                <label class="form-content__label" for="user-name">Имя:</label>
+                <input class="form-content__text-user" type="text" id="user-name" required="" placeholder="Введите ваше имя*">
+              </div>
+              <div class="form-content__user-item">
+                <label class="form-content__label" for="name-family">Фамилия:</label>
+                <input class="form-content__text-user" type="text" id="name-family" required="" placeholder="Укажите фамилию*">
+              </div>
+              <div class="form-content__user-item">
+                <label class="form-content__label" for="name-patronymic">Отчество:</label>
+                <input class="form-content__text-user" type="text" id="name-patronymic" placeholder="Отчество, если желаете">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form-content__tel form-content__black">
+          <div class="form-content__tel-container">
+            <label for="user-tel" class="form-content__title">ТЕЛ</label>
+            <div class="form-content__user-wrapper"><input class="form-content__tel-text" type="tel" id="user-tel" required="" placeholder="+7 ХХХ ХХ ХХ*">
+              <span class="form-content__icon">
+                <svg height="40px" width="35px">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+              </span></div>
+          </div>
+        </fieldset>
+        <fieldset class="form-content__email form-content__black">
+          <div class="form-content__email-container">
+            <label for="user-email" class="form-content__title">E-MAIL</label>
+            <div class="form-content__user-wrapper"><input class="form-content__email-text" type="email" id="user-email" required="" placeholder="Ваш Email*">
+              <span class="form-content__icon">
+                <svg height="40px" width="35px">
+                  <use xlink:href="#icon-mail"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form-content__review">
+          <div class="form-content__review-container">
+            <label for="user-textarea" class="form-content__title">ДОП</label>
+            <textarea class="form-content__textarea" id="user-textarea">Опишите все ваши пожелания к заказу</textarea>
+          </div>
+        </fieldset>
+        <div class="form-content__button-container">
+          <p class="form-content__required-text">*Поля обязательны для заполнения</p>
+          <button class="button form-content__button">Отправить заказ</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="page-footer page-footer--form">
+    <div class="page-footer__container">
+      <a href="index.html" class="page-footer__logo page-footer__logo--disable" aria-label="Магазин мишка">
+        <svg width="110" height="42">
+          <use xlink:href="#logo-footer"></use>
+        </svg>
+      </a>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a href="#" class="social__link social__link--inst">
+            <svg width="25" height="25" aria-label="Иснтаграм">
+              <use xlink:href="#icon-insta"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--fb" aria-label="Фейсбук">
+            <svg width="25" height="25">
+              <use xlink:href="#icon-fb"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--tw">
+            <svg width="25" height="25" aria-label="Твиттер">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__text"><span>Разработано</span>
+        <span class="page-footer__p page-footer__p--icon">
+          <svg width="40" height="40">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </footer>
+  <div class="overlay"></div>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

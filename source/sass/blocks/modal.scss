@@ -1,0 +1,136 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 120;
+  display: none;
+  box-sizing: border-box;
+  width: 320px;
+  height: 337px;
+  padding: 37px 30px 48px 30px;
+
+  background-color: #ffffff;
+  border-top: 1px solid #c7c7c7;
+  box-shadow: 0 4px 4px 0 #c7c7c7;
+}
+
+.modal--js {
+  display: block;
+}
+
+.modal__title {
+  width: 148px;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 25px;
+
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.modal__description {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 31px;
+}
+
+.modal__size-label {
+  display: block;
+  box-sizing: border-box;
+  width: 82px;
+  height: 52px;
+  padding-top: 18px;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  text-align: center;
+  color: #444444;
+  text-transform: uppercase;
+
+  border: 2px solid #ececec;
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
+
+  &:active {
+    border-color: #62d1ba;
+  }
+}
+
+.modal__size-input:checked + .modal__size-label {
+  border-color: #62d1ba;
+}
+
+.modal__size-input:focus + .modal__size-label {
+  outline: 1px solid #3399cc;
+}
+
+.modal__size:not(:nth-of-type(3n+3)) {
+  margin-right: 7px;
+}
+
+.modal__button {
+  width: 100%;
+  min-height: 52px;
+  padding: 10px;
+
+  font: inherit;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #62d1ba;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 568px;
+    padding: 25px 107px 46px 107px;
+
+    border: 1px solid #c7c7c7;
+    border-bottom: none;
+  }
+
+  .modal__title {
+    width: 101%;
+    padding-bottom: 20px;
+
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .modal__description {
+    margin-bottom: 25px;
+
+    font-size: 17px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .modal__size-label {
+    display: block;
+    width: 112px;
+    height: 52px;
+
+    text-align: center;
+  }
+}

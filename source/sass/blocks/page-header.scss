@@ -1,0 +1,222 @@
+.page-header {
+  min-height: 78px;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.page-header__top {
+  position: relative;
+
+  width: 260px;
+  margin: 0 auto;
+}
+
+.page-header__logo {
+  display: block;
+  width: 200px;
+  margin: auto;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-header__image {
+  display: block;
+  margin: 0 auto;
+  padding: 22px;
+}
+
+.a {
+  transform: rotate(45deg);
+}
+
+.page-header__list {
+  &--none {
+    display: none;
+  }
+}
+
+.page-header__deliver {
+  z-index: 1;
+
+  display: none;
+  margin: 0;
+  margin-top: 19px;
+  margin-right: 0;
+  padding: 0;
+
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 31px;
+  right: -3px;
+  z-index: 2;
+
+  display: block;
+  width: 22px;
+  height: 16px;
+  padding: 0;
+
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header--nojs .page-header__toggle {
+  display: none;
+}
+
+.page-header--closed .page-header__toggle::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: #000000;
+  box-shadow: 0 5px 0 0 #000000, 0 10px 0 0 #000000;
+}
+
+.page-header--closed .page-header__toggle:active::before {
+  opacity: 0.3;
+}
+
+.page-header--opened .page-header__toggle {
+  top: 31px;
+  right: -3px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+
+    width: 22px;
+    height: 2px;
+
+    background-color: #000000;
+  }
+
+  &::before {
+    box-shadow: none;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .page-header--closed .site-list__item {
+    display: none;
+  }
+
+  .page-header--closed .shop-list__item {
+    display: none;
+  }
+
+  .page-header--nojs .site-list__item {
+    display: block;
+  }
+
+  .page-header--nojs .shop-list__item {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-header {
+    min-height: 88px;
+
+    border-bottom: none;
+  }
+
+  .page-header__logo {
+    margin: 0;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 768px;
+    height: 87px;
+    min-height: 88px;
+    margin: 0 auto;
+    padding-right: 50px;
+    padding-left: 50px;
+
+    border-bottom: 1px solid #dfdfdf;
+  }
+
+  .page-header__deliver {
+    display: block;
+    order: 5;
+  }
+
+  .page-header__top {
+    order: -2;
+    width: 293px;
+    height: 88px;
+    margin: 0;
+  }
+
+  .page-header__top img {
+    width: 110px;
+    margin-left: 0;
+  }
+
+  .page-header__image {
+    display: block;
+    margin-top: 22px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1150px) {
+  .page-header__container {
+    width: 1150px;
+  }
+
+  .page-header__top {
+    width: 167px;
+    margin: 0;
+    margin-right: auto;
+    margin-left: 8px;
+  }
+
+  .page-header__image {
+    margin: 0 auto;
+    margin-top: 7px;
+    margin-right: 56px;
+  }
+
+  .page-header__top img {
+    width: 150px;
+  }
+}

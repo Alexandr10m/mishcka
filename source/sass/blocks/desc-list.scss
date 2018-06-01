@@ -1,0 +1,99 @@
+.desc-list__button {
+  position: relative;
+
+  display: block;
+  padding-top: 27px;
+  padding-right: 160px;
+  padding-bottom: 27px;
+  padding-left: 32px;
+
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  &:active {
+    color: #8be2d0;
+  }
+
+  &--left {
+    background-color: #63d1bb;
+  }
+
+  &--right {
+    background-color: #56c3b2;
+  }
+}
+
+.desc-list__button-icon {
+  position: absolute;
+  top: 19px;
+  right: 24px;
+
+  width: 70px;
+  height: 70px;
+}
+
+.desc-list__button-icon--lamp {
+  background: url("../img/icon-interior.svg") no-repeat center;
+  opacity: 0.2;
+}
+
+.desc-list__button-icon--cube {
+  background: url("../img/icon-toy.svg") no-repeat center;
+  opacity: 0.2;
+}
+
+.desc-list__button:active .desc-list__button-icon--lamp,
+.desc-list__button:active .desc-list__button-icon--cube {
+  opacity: 0.1;
+}
+
+.desc-list {
+  display: block;
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.desc-list__text {
+  display: block;
+  width: 130px;
+}
+
+@media (min-width: 768px) {
+  .desc-list {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .desc-list__button {
+    width: 335px;
+    padding-top: 28px;
+    padding-bottom: 34px;
+    padding-left: 37px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &:hover {
+      transform: translateY(-5px);
+
+      transition: transform 0.3s;
+    }
+  }
+
+  .desc-list__button-icon {
+    top: 26px;
+    right: 26px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .desc-list__button {
+    width: 525px;
+  }
+}

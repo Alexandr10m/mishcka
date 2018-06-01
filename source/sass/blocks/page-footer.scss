@@ -1,0 +1,135 @@
+.page-footer {
+  background-color: #f1f1f1;
+}
+
+.page-footer__container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 320px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.page-footer--universal,
+.page-footer--form {
+  padding-top: 28px;
+}
+
+.page-footer__text {
+  @include bold-font(19px, 18px);
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 184px;
+
+  margin: 0;
+  padding: 0;
+  margin-left: 39px;
+  padding-top: 39px;
+  margin-bottom: 13px;
+
+  text-decoration: none;
+
+  border-top: 1px solid #ececec;
+  cursor: pointer;
+}
+
+.page-footer__text span {
+  flex-basis: 10%;
+}
+
+.page-footer__logo--disable {
+  display: none;
+}
+
+.page-footer__logo {
+  width: 100px;
+  margin-right: 80px;
+
+  transform: translateY(-10px);
+  cursor: pointer;
+
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.5;
+
+    fill: #46c1ae;
+  }
+}
+
+.page-footer__p--icon {
+  width: 30px;
+  align-self: flex-start;
+
+  fill: #46c1ae;
+  transform: translateY(-4px);
+  opacity: 0.8;
+}
+
+.page-footer__text:active {
+  opacity: 0.5;
+}
+
+.page-footer__text:active .page-footer__p--icon {
+  opacity: 0.3;
+}
+
+.page-footer__text:hover .page-footer__p--icon {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .page-footer__container {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 768px;
+    padding: 0 50px;
+    padding-bottom: 38px;
+  }
+
+  .page-footer--form {
+    padding-top: 56px;
+  }
+
+  .page-footer--universal {
+    padding-top: 64px;
+  }
+
+  .page-footer__container--index,
+  .page-footer__container--catalog {
+    padding-top: 61px;
+  }
+
+  .page-footer__text {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-footer__logo--disable {
+    display: block;
+  }
+}
+
+@media (min-width: 1150px) {
+  .page-footer__container {
+    width: 1150px;
+    padding: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+  }
+
+  .page-footer--form {
+    padding-top: 57px;
+  }
+
+  .page-footer--universal {
+    padding-top: 64px;
+  }
+}

@@ -1,0 +1,79 @@
+.promo {
+  position: relative;
+
+  background-color: #f1f1f1;
+}
+
+.promo__title {
+  @include bold-font(29px, 30px);
+
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+  padding-top: 68px;
+  padding-bottom: 75px;
+  letter-spacing: -0.7px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+}
+
+.promo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+
+  display: none;
+  width: 100%;
+  height: 23px;
+
+  background-image: url("../img/bg-zigzag-fill.svg");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 23px;
+}
+
+@media (min-width: 768px) {
+  .promo__title {
+    @include bold-font(43px, 50px);
+
+    margin-bottom: 0;
+    padding-top: 95px;
+    padding-bottom: 93px;
+  }
+
+  .promo::after {
+    display: block;
+  }
+
+  .promo--catalog {
+    margin-bottom: 67px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .promo__title {
+    @include bold-font(53px, 57px);
+
+    padding-bottom: 110px;
+    letter-spacing: -0.2px;
+  }
+
+  .promo::after {
+    bottom: -13px;
+
+    height: 42px;
+
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: auto 81%;
+  }
+
+  .promo--catalog {
+    margin-bottom: 90px;
+  }
+}

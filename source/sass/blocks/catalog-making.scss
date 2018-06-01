@@ -1,0 +1,243 @@
+.catalog-making--main-catalog {
+  @include font(13px, 30px, $lblack);
+
+  margin-bottom: 56px;
+}
+
+.catalog-making__title {
+  @include bold-font(17px, 24px);
+
+  display: block;
+  width: 80px;
+  margin: 0 auto;
+  margin-top: 23px;
+  margin-bottom: 26px;
+
+  text-align: center;
+}
+
+.catalog-making__video-wrapper {
+  position: relative;
+
+  margin-bottom: 17px;
+}
+
+.catalog-making__video-play {
+  display: block;
+  position: absolute;
+  top: 21%;
+  left: 31%;
+  overflow: hidden;
+
+  width: 105px;
+  height: 80px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.catalog-making__icon {
+  position: absolute;
+  top: 29px;
+  left: 34px;
+
+  width: 30px;
+  height: 30px;
+
+  fill: #63d1bb;
+}
+
+.catalog-making__video-wrapper:hover .catalog-making__video-play {
+  transform: scale(1.2);
+}
+
+.catalog-making__video-wrapper:active .catalog-making__video-play {
+  transform: scale(0.8);
+  opacity: 0.7;
+  outline: none;
+}
+
+.catalog-making__discribe {
+  @include font(13px,24px,$lblack);
+
+  position: relative;
+
+  display: block;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  padding-right: 37px;
+  padding-left: 35px;
+}
+
+.catalog-making__container::after {
+  content: "";
+  position: absolute;
+  overflow: hidden;
+  top: 29px;
+  left: 34px;
+
+  width: 30px;
+  height: 30px;
+  background: url("../img/icon-video.svg") no-repeat 50% 50%;
+}
+
+.catalog-making {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.catalog-making__container {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 58px;
+  padding-bottom: 32px;
+
+  border: 1px solid #ececec;
+
+  &:hover {
+    box-shadow: 0 4px 10px 0 #e8e8e8;
+  }
+
+  &:active {
+    box-shadow: 0 2px 4px 0 #e8e8e8;
+  }
+}
+
+.catalog-making__button {
+  width: 191px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .catalog-making {
+    box-sizing: border-box;
+    width: 768px;
+    padding: 0 50px;
+  }
+
+  .catalog-making__video-play {
+    top: 40%;
+    left: 42%;
+  }
+
+  .catalog-making__container {
+    display: flex;
+    flex-direction: column;
+    width: 668px;
+    margin-bottom: 62px;
+    padding-bottom: 45px;
+  }
+
+  .catalog-making__title {
+    width: auto;
+    margin-top: 38px;
+    margin-bottom: 32px;
+    margin-left: 0;
+    padding-left: 105px;
+
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .catalog-making__video-wrapper {
+    flex: 0 1 auto;
+    order: -1;
+    width: 667px;
+    height: 455px;
+    margin-bottom: 0;
+  }
+
+  .catalog-making__discribe {
+    @include font(15px,
+    30px,
+    $lblack);
+
+    margin-bottom: 35px;
+    padding-left: 40px;
+  }
+
+  .catalog-making__button {
+    width: 584px;
+    margin: 0 auto;
+    padding: 8px;
+  }
+
+  .catalog-making__container::after {
+    top: 66%;
+    left: 41px;
+  }
+
+  .catalog-making--main-catalog {
+    margin-bottom: 62px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .catalog-making {
+    width: 1150px;
+    padding: 0 50px;
+  }
+
+  .catalog-making__container {
+    position: relative;
+
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1050px;
+    padding: 0;
+    padding-left: 684px;
+    min-height: 456px;
+    margin-bottom: 103px;
+  }
+
+  .catalog-making__video-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 684px;
+  }
+
+  .catalog-making__video-wrapper img {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .catalog-making__wrapper {
+    align-self: flex-end;
+    width: 235px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 53px;
+    margin-bottom: 62px;
+  }
+
+  .catalog-making__discribe {
+    margin-bottom: 46px;
+    padding: 0;
+  }
+
+  .catalog-making__title {
+    width: 151px;
+    margin: 0;
+    margin-top: 93px;
+    padding-left: 79px;
+
+    text-align: left;
+  }
+
+  .catalog-making__button {
+    width: 227px;
+    padding: 9px;
+  }
+
+  .catalog-making__container::after {
+    top: 41px;
+    left: 73%;
+    z-index: 20;
+  }
+}
